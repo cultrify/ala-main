@@ -10,6 +10,7 @@
     echo $query->rowCount() . " records UPDATED successfully <br>";
     echo ini_set("25","465");
     $a = $_GET["IDTicket"];
+    $a = password_hash($a, PASSWORD_DEFAULT);
     $template = "./tickettemplate.php";
     $subject = "Thank you for choosing Cultrify!";
     $headers = array(
