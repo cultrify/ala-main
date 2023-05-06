@@ -10,7 +10,7 @@
   setcookie('adminLastname', '', time() + 3600, '/');
   setcookie('idAdmin', '', time() + 3600, '/');
 
-  header('Location: ./signup.php');
+  header('Location: ./auth/signup.php');
   exit();
   
 ?>

@@ -1,6 +1,12 @@
 <?php
   include_once dirname(__FILE__). '/../../../Model/Client.php';
   include_once dirname(__FILE__). '/../../../Controller/ClientC.php';
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+  require dirname(__FILE__). '/../../../PHPMailer/src/PHPMailer.php';
+  require dirname(__FILE__).'/../../../PHPMailer/src/SMTP.php';
+  require dirname(__FILE__).'/../../../PHPMailer/src/Exception.php';
+
 
   $sucessMsg = '';
   // Error Messeges
@@ -92,6 +98,10 @@
         $clientExists = $clientC->getClientByEmail($_POST['email']);
   
         if (!$clientExists) {
+          // Generate a random confirmation code 
+          $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+          $randomStr = substr(str_shuffle($chars), 0, 10);
+
           $client = new Client(
             null,
             $_POST['firstName'],
@@ -99,13 +109,41 @@
             $_POST['email'],
             password_hash($_POST['password'], PASSWORD_DEFAULT),
             $_POST['phone'],
+            0,
+            $randomStr,
           );
   
           $clientC->addClient($client);
 
+          $mail = new PHPMailer(true) ;
+          $mail->isSMTP();
+          $mail->Host = 'smtp.gmail.com';
+          $mail->SMTPAuth = true ;
+          $mail->Username = 'arbiahamdana123@gmail.com';
+          $mail->Password = 'kfjdoceufpdcaacp';
+          $mail->SMTPSecure = 'ssl' ;
+          $mail->Port = 465 ;
+          $mail->setFrom('arbiahamdana123@gmail.com');
+          $mail->addAddress($_POST["email"]);
+          $mail->isHTML(true); 
+          $email_template = 'email-confirmation.html';
+          $message = file_get_contents($email_template);
+          $link = str_replace('signup.php', 'confirm-account.php?confirmationCode='.$randomStr, $_SERVER['REQUEST_URI']);
+          $link = 'http://localhost'.$link;
+          $message = str_replace(
+            '%confirmationLink%', 
+            $link, 
+            $message
+          );
 
-          header("Location: login.php?accountCreated=".true);
-          exit();
+          $mail->Subject = 'Cultrify - Account Confirmation!' ;
+          $mail->MsgHTML($message);
+
+          /*
+          $mail->Body = 'Confirm' ;*/
+          $mail->send();
+         // header("Location: login.php?accountCreated=".true);
+         // exit();
         } else {
           $emailErr= 'This Email Already Exists!';
         }

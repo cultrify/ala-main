@@ -1,6 +1,7 @@
 <?php
   include_once dirname(__FILE__). '/../../../Model/Client.php';
   include_once dirname(__FILE__). '/../../../Controller/ClientC.php';
+  // require dirname(__FILE__). '/../../../mailto.php';
 
   $sucessMsg = '';
   $errMsg = '';

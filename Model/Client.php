@@ -7,6 +7,8 @@ class Client {
   private ?string $email = null;
   private ?string $password = null;
   private ?int $phone = null;
+  private ?int $isConfirmed = null;
+  private ?string $confirmationCode = null;
 
   //Construct
   public function __construct(
@@ -15,7 +17,9 @@ class Client {
     $lastName,
     $email,
     $password,
-    $phone
+    $phone,
+    $isConfirmed,
+    $confirmationCode,
   ) {
     $this->idClient = $idClient;
     $this->firstName = $firstName;
@@ -23,6 +27,8 @@ class Client {
     $this->email = $email;
     $this->password = $password;
     $this->phone = $phone;
+    $this->isConfirmed = $isConfirmed;
+    $this->confirmationCode = $confirmationCode;
   }
 
   // Getters
@@ -49,6 +55,14 @@ class Client {
     return $this->phone;
   }
 
+  public function getIsConfirmed() {
+    return $this->isConfirmed;
+  }
+
+  public function getConfirmationCode() {
+    return $this->confirmationCode;
+  }
+
   // Setters
   public function setId($idClient) {
     $this->idClient = $idClient;
@@ -72,6 +86,14 @@ class Client {
 
   public function setPhone($phone) {
     $this->phone = $phone;
+  }
+
+  public function setIsConfirmed($isConfirmed) {
+    $this->isConfirmed = $isConfirmed;
+  }
+
+  public function setConfirmationCode($confirmationCode) {
+    $this->confirmationCode = $confirmationCode;
   }
 }
 

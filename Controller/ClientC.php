@@ -46,7 +46,7 @@ class ClientC {
 
   function addClient($client) {
     $sql = "INSERT INTO client 
-            VALUES (:id ,:fi, :la, :em, :pass, :p)";
+            VALUES (:id ,:fi, :la, :em, :pass, :p, :ic, :cc)";
     $db = config::getConnexion();
     try {
       $query = $db->prepare($sql);
@@ -57,7 +57,9 @@ class ClientC {
           ':la' => $client->getLastName(),
           ':em' => $client->getemail(),
           ':pass' => $client->getpassword(),
-          ':p' => $client->getphone()
+          ':p' => $client->getphone(),
+          ':ic' => $client->getIsConfirmed(),
+          ':cc' => $client->getConfirmationCode(),
       ]);
     } catch (Exception $e) {
       echo 'Error: ' . $e->getMessage();
@@ -72,7 +74,9 @@ class ClientC {
             firstName = :fi, 
             lastName = :la,
             email = :em,
-            phone = :p
+            phone = :p,
+            isConfirmed = :ic,
+            confirmationCode = :cc
         WHERE idClient = :id"
       );
 
@@ -81,8 +85,32 @@ class ClientC {
         'fi' => $client->getFirstName(),
         'la' => $client->getLastName(),
         'em' => $client->getEmail(),
-        'p' => $client->getPhone()
+        'p' => $client->getPhone(),
+        'ic' => $client->getIsConfirmed(),
+        'cc' => $client->getConfirmationCode(),
       ]);
+      $query->rowCount() . " records UPDATED successfully <br>";
+    } catch (PDOException $e) {
+      echo $e->getMessage();
+    }
+  }
+
+  function confirmAccount($confirmationCode) {
+    $db = config::getConnexion();
+    try {
+      $query = $db->prepare(
+        "UPDATE client SET
+            isConfirmed = :ic,
+            confirmationCode = :cc
+        WHERE confirmationCode = :confirmationCode"
+      );
+
+      $query->execute([
+        'ic' => 1,
+        'cc' => '',
+        'confirmationCode'  => $confirmationCode,
+      ]);
+
       $query->rowCount() . " records UPDATED successfully <br>";
     } catch (PDOException $e) {
       echo $e->getMessage();

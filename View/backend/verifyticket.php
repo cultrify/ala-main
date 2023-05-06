@@ -1,5 +1,6 @@
 <?php
-include 'C:/xampp/htdocs/web/Controller/TicketC.php';
+//include 'C:/xampp/htdocs/web/Controller/TicketC.php';
+include_once dirname(__FILE__). '/../../Controller/TicketC.php';
 
 // Get the ID from the QR scanner
 $hashed_qr_id = $_GET['id'];

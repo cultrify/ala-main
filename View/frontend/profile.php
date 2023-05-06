@@ -3,7 +3,9 @@
   include_once dirname(__FILE__). '/../../Controller/ClientC.php';
 
   function renderHeader($pageTitle) {
-    $loggedin = $_COOKIE['loggedin'];
+   // $loggedin = $_COOKIE['loggedin'];
+   $loggedin = isset($_COOKIE['loggedin']) ? $_COOKIE['loggedin'] : null;
+
     $fullname = $_COOKIE['firstname'].' '.$_COOKIE['lastname'];
 
     extract([
@@ -77,6 +79,8 @@
             $_POST['email'],
             null,
             $_POST['phone'],
+            null,
+            null,
           );
   
           echo $_COOKIE['idClient'];

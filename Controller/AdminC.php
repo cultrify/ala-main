@@ -6,12 +6,19 @@ class AdminC {
   public function listAdmin() {
     $sql = "SELECT * FROM admin";
     $db = config::getConnexion();
+    $allAdmins = [];
     try {
       $query = $db->prepare($sql);
       $query->execute();
-      $admin = $query->fetch();
+      // $admin = $query->fetch();
       
-      return $admin;
+      //return $admin;
+
+      while ($admin = $query->fetch()) {
+        array_push($allAdmins, $admin);
+      }
+
+      return $allAdmins;
     } catch (Exception $e) {
         die('Error:' . $e->getMessage());
     }
@@ -47,9 +54,28 @@ class AdminC {
     }
   }
 
+    function getAdminClientAccounts() {
+    $sql = "SELECT * from client JOIN admin on client.idClient = admin.idClient";
+    $db = config::getConnexion();
+    $allAccounts = [];
+    try {
+      $query = $db->prepare($sql);
+      $query->execute();
+
+      while ($account = $query->fetch()) {
+        array_push($allAccounts, $account);
+      }
+
+      return $allAccounts;
+    } catch (Exception $e) {
+      die('Error: '. $e->getMessage());
+    }
+  }
+
+
   function addAdmin($admin) {
     $sql = "INSERT INTO admin 
-            VALUES (:ida ,:fia, :laa, :ema, :passa)";
+            VALUES (:ida ,:fia, :laa, :ema, :passa, :idc)";
     $db = config::getConnexion();
     try {
       $query = $db->prepare($sql);
@@ -59,6 +85,7 @@ class AdminC {
         ':laa' => $admin->getLastName(),
         ':ema' => $admin->getEmail(),
         ':passa' => $admin->getPassword(),
+        ':idc' => $admin->getIdClient(),
       ]);
     } catch (Exception $e) {
       echo 'Error: ' . $e->getMessage();

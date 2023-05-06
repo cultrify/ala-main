@@ -1,12 +1,14 @@
 <?php
 
-include 'C:/xampp/htdocs/web/Controller/TicketC.php';
+//include_once dirname(__FILE__). '/../../Controller/TicketC.php';
+include 'C:/xampp/htdocs/zeineb-main/Controller/TicketC.php';
+
 
 $error = "";
 
 $ticketc = new TicketC();
     
-$ticket = null;
+$ticket = null; 
 
 $x = 0;
 
@@ -201,6 +203,6 @@ if (
 		}
 	</script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>

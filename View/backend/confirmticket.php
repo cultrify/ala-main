@@ -1,5 +1,5 @@
 <?php
-    include 'C:/xampp/htdocs/web/Controller/TicketC.php';
+    include 'C:/xampp/htdocs/zeineb-main/Controller/TicketC.php';
     $db = config::getConnexion();
     $query = $db->prepare(
     'UPDATE ticket SET Confirmation = :cn WHERE IDTicket= :idc');

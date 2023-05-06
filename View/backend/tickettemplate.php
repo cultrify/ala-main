@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -310,9 +308,9 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
         
   <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
-<div align="center" href="http://localhost/web/View/frontend/contact.php">
+<div align="center" href="http://localhost/zeineb-main/View/frontend/contact.php">
   <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.unlayer.com" style="height:42px; v-text-anchor:middle; width:209px;" arcsize="9.5%"  stroke="f" fillcolor="#dc9663"><w:anchorlock/><center style="color:#FFFFFF;font-family:arial,helvetica,sans-serif;"><![endif]-->  
-    <a href="http://localhost/web/View/frontend/contact.php" target="_blank" class="v-button v-size-width v-font-size" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #dc9663; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:36%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
+    <a href="http://localhost/zeineb-main/View/frontend/contact.php" target="_blank" class="v-button v-size-width v-font-size" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #dc9663; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:36%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
       <span style="display:block;padding:10px 20px;line-height:120%;"><strong><span style="font-size: 18px; line-height: 21.6px; font-family: 'Playfair Display', serif;" >Call Us</span></strong></span>
     </a>
   <!--[if mso]></center></v:roundrect><![endif]-->

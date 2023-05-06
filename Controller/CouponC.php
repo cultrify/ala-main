@@ -1,7 +1,10 @@
 <?php
 
-include 'C:/xampp/htdocs/web/config.php';
-include 'C:/xampp/htdocs/web/Model/Coupon.php';
+include_once dirname(__DIR__). '/config.php';
+include_once dirname(__DIR__). '/Model/Coupon.php';
+
+//include 'C:/xampp/htdocs/zeineb-main/Model/Coupon.php';
+//include 'C:/xampp/htdocs/zeineb-main/Controller/TicketC.php';
 
 class CouponC
 {
@@ -97,12 +100,14 @@ class CouponC
             $db = config::getConnexion();
             $query = $db->prepare(
                 'UPDATE coupon SET
+                    IDCoupon = :idc,
                     NomInf = :ni,
                     Number = :num,
                     Percentage = :per
                 WHERE IDCoupon = :id'
             );
             $query->execute([
+                'idc' => $coupon->getIDCoupon(),
                 'id' => $id,
                 'ni' => $coupon->getNomInf(),
                 'num' => $coupon->getNumber(),

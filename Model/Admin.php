@@ -2,6 +2,7 @@
 
 class Admin {
   private ?int $idAdmin = null;
+  private ?int $idClient = null;
   private ?string $firstName = null;
   private ?string $lastName = null;
   private ?string $email = null;
@@ -14,8 +15,10 @@ class Admin {
     $lastName,
     $email,
     $password,
+    $idClient,
   ) {
     $this->idAdmin = $idAdmin;
+    $this->idClient = $idClient;
     $this->firstName = $firstName;
     $this->lastName = $lastName;
     $this->email = $email;
@@ -25,6 +28,10 @@ class Admin {
   // Getters
   public function getIdAdmin() {
     return $this->idAdmin;
+  }
+
+  public function getIdClient() {
+    return $this->idClient;
   }
 
   public function getFirstName() {
@@ -44,7 +51,11 @@ class Admin {
 
   // Setters
   public function setId($idAdmin) {
-    $this->idClient = $idAdmin;
+    $this->idAdmin = $idAdmin;
+  }
+
+  public function setIdClient($idClient) {
+    $this->idClient = $idClient;
   }
 
   public function setFirstName($firstName) {

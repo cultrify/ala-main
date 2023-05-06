@@ -1,81 +1,27 @@
-<!doctype html>
-<html lang="zxx">
+<?php
+  function renderHeader($pageTitle) {
+    //$loggedin = $_COOKIE['loggedin'];
+    $loggedin = isset($_COOKIE['loggedin']) ? $_COOKIE['loggedin'] : null;
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title><?php echo $pageTitle ?></title>
-  <!-- google fonts -->
-  <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <!-- google fonts -->
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-starter.css">
-  <!-- Template CSS -->
-</head>
+    $fullname = '';
+if (isset($_COOKIE['firstname'])) {
+    $fullname .= $_COOKIE['firstname'];
+}
+if (isset($_COOKIE['lastname'])) {
+    $fullname .= ' '.$_COOKIE['lastname'];
+}
 
-<body>
-  <!--header-->
-  <header id="site-header" class="fixed-top">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg stroke">
- 
-      <a class="navbar-brand" href="./">
-          <img src="assets/images/cultrify-logo.png" alt="Your logo" style="height: 70px;" />
-      </a>
-        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-          </span>
-        </button>
+    extract([
+      'pageTitle' => $pageTitle,
+      'loggedIn' => $loggedin,
+      'fullname' => $fullname
+    ]);
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.php">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="destinations.php">Destinations</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact</a>
-            </li>
-          </ul>
-        </div>
-              <div class="d-lg-block d-none">
-                <a href="./auth/signup.php" style="left: 30px;" class="btn btn-style btn-secondary">Sign in</a>
-              </div>
-              <div class="d-lg-block d-none">
-                <a href="./auth/login.php" style="left: 30px;" class="btn btn-style btn-secondary">Login</a>
-            </div>
+    include './partials/header.php';
+  }
 
-        <!-- toggle switch for light and dark theme -->
-        <div class="mobile-position">
-          <nav class="navigation">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox">
-                <div class="mode-container">
-                  <i class="gg-sun"></i>
-                  <i>class="gg-moon"></i>
-                </div>
-              </label>
-            </div>
-          </nav>
-        </div>
-        <!-- //toggle switch for light and dark theme -->
-      </nav>
-    </div>
-  </header>
-  <!-- //header -->
+  renderHeader('Cultrify - Destinations');
+?>
   <!-- about breadcrumb -->
   <section class="w3l-about-breadcrumb text-left">
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">

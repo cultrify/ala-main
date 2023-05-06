@@ -1,8 +1,16 @@
 <?php
   function renderHeader($pageTitle) {
-    $loggedin = $_COOKIE['loggedin'];
-    $fullname = $_COOKIE['firstname'].' '.$_COOKIE['lastname'];
+   // $loggedin = $_COOKIE['loggedin'];
+   $loggedin = isset($_COOKIE['loggedin']) ? $_COOKIE['loggedin'] : null;
 
+    
+    $fullname = '';
+if (isset($_COOKIE['firstname'])) {
+    $fullname .= $_COOKIE['firstname'];
+}
+if (isset($_COOKIE['lastname'])) {
+    $fullname .= ' '.$_COOKIE['lastname'];
+}
     extract([
       'pageTitle' => $pageTitle,
       'loggedIn' => $loggedin,
