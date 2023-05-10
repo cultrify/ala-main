@@ -1,7 +1,7 @@
 <?php
 
-include 'C:/xampp/htdocs/zeineb-main/Controller/CouponC.php';
-include 'C:/xampp/htdocs/zeineb-main/Model/Ticket.php';
+include 'C:/xampp/htdocs/ala-main-main/Controller/CouponC.php';
+include 'C:/xampp/htdocs/ala-main-main/Model/Ticket.php';
 
 class TicketC 
 {

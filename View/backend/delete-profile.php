@@ -1,5 +1,5 @@
 <?php
-  include_once dirname(__FILE__). '/../../Controller/AdminC.php';
+  include '/../../Controller/AdminC.php';
 
   $adminC = new AdminC();
 

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+
+
+k .logo 
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+    width: 150px; height: 120px; 
+    background-image: url("./assets/fitzone.png");
+}
+
+k .backLink {
+    margin: 30px 20px;
+    display: block;
+    color: white;
+}
+
+k .wrapper {
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+k .recList-wrapper {
+    margin: 0 80px;
+}
+
+
+k .wrapper .cl-info {
+    display: flex;
+    justify-content: space-between;
+    align-items :center ; 
+    padding: 20px 40px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+k .wrapper .cl-info button {
+    padding: 10px;
+    background: #3C91E6;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+}
+
+k #AddNewRec,
+k #updateRec {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000e0;
+}
+
+k .shown {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+k .anr-content {
+    width: 450px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+k .anr-content .cls {
+    position: relative;
+    top: -30px;
+    left: 435px;
+    padding: 15px;
+    background: #EEC643;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+k .anr-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+k .anr-content form input {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+k .anr-content form button {
+    padding: 15px 66px;
+    margin: 20px 0;
+    background: black;
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+k .recList-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: coral;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+k .recList-title h4{
+    flex: 1;
+} 
+k .recList-title input {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+k #recList {
+    display: grid;
+    grid-template-areas: 'div div div';
+    background: #dbdbdb;
+}
+
+k .card {
+    background: #333333;
+    margin: 10px;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: stretch;
+}
+
+k .card h5 {
+    color: #bbb;
+}
+
+k .card div {
+    padding-top: 18px;
+}
+
+k .card button.up {
+    padding: 10px;
+    background: #3da91d;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+k .card button.dl {
+    padding: 10px;
+    background: #d65555;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+k .card button.vi {
+    padding: 10px;
+    background: #9555d6;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+
+k .reponse {
+    color: whitesmoke;
+}
+
+k .card-rp {
+    background-color: grey !important;
+}
+
+k .reponse .cl-info {
+    display: flex;
+    justify-content: space-between;
+    align-items :center ; 
+    padding: 20px 40px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+k .reponse .cl-info button {
+    padding: 10px;
+    background: #3C91E6;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+}
+
+
+k #blk_lst .blk_item{
+    display: flex;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #ddd;
+
+}

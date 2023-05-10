@@ -1,6 +1,6 @@
 <?php
-include_once dirname(__FILE__). '/../../Controller/TicketC.php';
-
+include_once  '../../Controller/TicketC.php';
+include_once  '../../Controller/CouponC.php';
 $ticketc = new TicketC();
 
 $couponc = new CouponC();

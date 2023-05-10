@@ -1,5 +1,5 @@
 <?php
-include 'C:/xampp/htdocs/zeineb-main/Controller/CouponC.php';
+include '../../Controller/CouponC.php';
 //include_once dirname(__FILE__). '/../../Controller/TicketC.php';
 //include_once dirname(__FILE__). '/../../Controller/CouponC.php';
 

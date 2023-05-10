@@ -133,7 +133,7 @@ assets/
             <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary rounded h-100 p-4">
                   <h6 class="mb-4">Update Profile</h6>
-                  <form action="/zeineb-main/View/backend/profile.php" method="post">
+                  <form action="/ala-ala-main/View/backend/profile.php" method="post">
                     <div class="mb-3">
                         <label for="firstname" class="form-label">First name</label>
                         <input type="text" name="firstName" class="form-control" id="firstname" 
@@ -161,7 +161,7 @@ assets/
               <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary rounded h-100 p-4">
                   <h6 class="mb-4">Delete Profile</h6>
-                  <form action="/zeineb-main/View/backend/delete-profile.php" method="post">
+                  <form action="/ala-main-main/View/backend/delete-profile.php" method="post">
                     <button type="submit" class="btn btn-primary">Delete</button>
                   </form>
                 </div>

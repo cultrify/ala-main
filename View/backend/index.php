@@ -2,13 +2,12 @@
   //include 'C:/xampp/htdocs/zeineb-main/Controller/CouponC.php';
   //include_once dirname(__FILE__). '/../../Controller/CouponC.php';
 
-  include 'C:/xampp/htdocs/zeineb-main/Controller/TicketC.php';
-
-
-  if(!$_COOKIE['adminLoggedin']) {
+ // include '../../../Controller/TicketC.php';
+  include '../../Controller/TicketC.php';
+ /* if($_COOKIE['adminLoggedin']) {
     header('Location: '.$_SERVER['REQUEST_URI'].'auth/login.php');
     exit();
-  }
+  }*/
 
   $couponc = new CouponC();
   $ticketc = new TicketC();
@@ -83,7 +82,7 @@
                             <thead>
                                 <tr class="text-white">
                                     <th scope="col">IDTicket</th>
-                                    <th scope="col">email</th>
+                                    <th scope="col">Email</th>
                                     <th scope="col">First Name</th>
                                     <th scope="col">Last Name</th>
                                     <th scope="col">Coupon</th>
@@ -115,12 +114,12 @@
                                     <td><?= $ticket['PickupDate']; ?></td>
                                     <td><?= $ticket['PickupTime']; ?></td>
                                     <td><?= $ticket['Confirmation']; ?></td>
-                                    <td><?= $ticket['NomInf']; ?></td>
+                                    <td><?= $coupon['NomInf']; ?></td>
                                     <td>
                                         <a class="btn btn-sm btn-primary" href="deleteticket.php?IDTicket=<?php echo $ticket['IDTicket']; ?>">Delete</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-sm btn-primary" href="confirmticket.php?IDTicket=<?php echo $ticket['IDTicket']; ?>">Confirm</a>
+                                        <a class="btn btn-sm btn-primary" href="confirmticket.php?IDTicket=<?php echo $ticket['IDTicket']; ?>&email=<?php echo $ticket['email']; ?>">Confirm</a>
                                     </td>
                                     <td><a class="btn btn-sm btn-primary" href="ticketedit.php?IDTicket=<?php echo $ticket['IDTicket']; ?>">Edit</a></td>
                                 </tr>

@@ -18,6 +18,7 @@
   renderHeader('Cultrify - Homepage');
 ?>
   <!--banner-slider-->
+
   <!-- main-slider -->
   <section class="w3l-main-slider" id="home">
     <div class="banner-content">
@@ -337,7 +338,7 @@
           <h6 class="sub-title text-center">Here’s what they have to say</h6>
           <h3 class="hny-title mb-md-5 mb-4">our clients do the talking</h3>
         </div>
-        <!-- /grids -->
+       
         <div class="testimonial-width">
           <div id="owl-demo1" class="owl-two owl-carousel owl-theme">
             <div class="item">
@@ -354,12 +355,14 @@
                     </div>
                     <div class="peopl align-self">
                       <h3>Rohit Paul</h3>
+                      
                       <p class="indentity">Example City</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            
             <div class="item">
               <div class="testimonial-content">
                 <div class="testimonial">
@@ -436,6 +439,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/modernizr-2.6.2.min.js"></script>
   <script src="assets/js/jquery.zoomslider.min.js"></script>
+  <script src="./reclamation.js"> </script>
   <!--//slider-js-->
   <script src="assets/js/owl.carousel.js"></script>
   <!-- script for tesimonials carousel slider -->

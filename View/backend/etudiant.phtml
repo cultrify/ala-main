@@ -1,0 +1,570 @@
+<link rel="stylesheet" href="./css/style.css">
+ <!-- Favicons -->
+ <link href="assets2/img/favicon.png" rel="icon">
+  <link href="assets2/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets2/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets2/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets2/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets2/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets2/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+  <!-- Template Main CSS File -->
+  <link href="assets2/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<style>
+    #hero {
+
+        width: 117.2%;
+        margin-left :-8.6%;
+        margin-top:-2%;
+    }
+    section {
+        width: 117.2%;
+        margin-left :-8.6%;
+    }
+#footer {
+  background: black;
+  width: 117.2%;
+  margin-left :-8.6%;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+  top :10%;
+
+}
+
+.calendar {
+  width: 35rem;
+  height: 39rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgb(255 255 255 / 40%);
+}
+
+.month {
+  width: 100%;
+  height: 6.5rem;
+  background-color: #41a3ab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #41a3ab;
+}
+</style>
+     
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center justify-content-lg-between">
+
+    <h1 class="logo me-auto me-lg-0"><a href="../index.html">Cultrify<span>.</span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">Calandrier</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto " href="#shows">Shows</a></li>
+ 
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <a href="add_etudiant.php" class="get-started-btn scrollto">Add Show</a>
+
+  </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center justify-content-center">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+      <div class="col-xl-6 col-lg-8">
+        <h1>Powerful Digital Shows<span>.</span></h1>
+        <h2>We are team of talented shows marketers</h2>
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-2 col-md-4">
+        <div class="icon-box">
+          <i class="ri-store-line"></i>
+          <h3><a href="">Show management</a></h3>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4">
+        <div class="icon-box">
+          <i class="ri-bar-chart-box-line"></i>
+          <h3><a href="">view shows</a></h3>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4">
+        <div class="icon-box">
+          <i class="ri-calendar-todo-line"></i>
+          <h3><a href="">calendar of shows</a></h3>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4">
+        <div class="icon-box">
+          <i class="ri-paint-brush-line"></i>
+          <h3><a href="">Delete Show</a></h3>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4">
+        <div class="icon-box">
+          <i class="ri-database-2-line"></i>
+          <h3><a href="">Edit Show</a></h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+        <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <p class="fst-italic">
+          In addition to displaying events, a calendar on a website may also include other features such as color coding, reminders, and integration with other applications or services. For example, a calendar 
+          may sync with a user's email or mobile device to provide reminders and notifications for upcoming events.
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i> Celebrities Attend Red Carpet Premiere of Highly Anticipated Movie.</li>
+            <li><i class="ri-check-double-line"></i> New Study Shows Surprising Benefits of Meditation for Stress Relief.</li>
+            <li><i class="ri-check-double-line"></i> Breaking News: Major Tech Company Announces Launch of Revolutionary New Product.</li>
+          </ul>
+          <p>
+          Overall, a calendar is an essential element of a website that helps users stay organized and on top of their schedules. It provides a
+           user-friendly way to view and manage events, and can improve the overall user experience of a website.  
+        </p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+ 
+
+  <!-- ======= Features Section ======= -->
+  <section id="services" class="features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="image col-lg-6" style='background-image: url("assets2/img/features.jpg");' data-aos="fade-right"></div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+            <i class="bx bx-receipt"></i>
+            <h4>Event Planning Made Easy</h4>
+            <p>An events service refers to a company or organization that provides planning, coordination, and management services for various types 
+              of events such as conferences, trade shows, product launches, weddings, and social gatherings.</p>
+          </div>
+          <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+            <i class="bx bx-cube-alt"></i>
+            <h4>Maximizing Your Event Success</h4>
+            <p>The primary goal of an events service is to ensure that the event is well-organized, successful, and memorable for all attendees. This involves working closely with the client to understand their goals and objectives, and then using
+               their expertise and resources to create an event that meets or exceeds those expectations.</p>
+          </div>
+
+          <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+            <i class="bx bx-shield"></i>
+            <h4>Take Your Event to the Next Level</h4>
+            <p>Overall, an events service plays a crucial role in the planning and execution of events,
+               and can help clients save time, reduce stress, and achieve their event goals with ease.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Features Section -->
+
+ 
+  
+ <!-- ======= Cta Section ======= -->
+  <section id="cta" class="cta">
+    <div class="container" data-aos="zoom-in">
+
+      <div class="text-center">
+        <h3>Add Show </h3>
+        <p>Adding a show to a list is a convenient way for users to keep track of the shows they are interested in watching or have already watched. It can also be a helpful tool for sharing recommendations with friends or family members who have similar tastes in media.</p>
+        <a class="cta-btn" href="add_etudiant.php">Add Show</a>
+      </div>
+
+    </div>
+  </section><!-- End Cta Section -->
+
+
+  <section id="shows" class="container">
+    <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+    <div class="card bg-glass">
+<div class="row">
+    <div class="col">
+        <h1><i class="bi bi-card-checklist"></i> Liste des evenements</h1>
+    </div>
+
+ </div>
+
+ <table class="table table-hover">
+ <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+
+                                <form action="" method="GET">
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+        <thead>
+            <tr>
+                
+                <th scope="col">Nom</th>
+                <th scope="col">Description</th>
+                <th scope="col">Durée</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+                                <?php 
+                                    $con = mysqli_connect("localhost","root","0000","cultrify_db");
+                                   //include './dbconnect.php';
+
+                                    if(!isset($_GET['search']))
+                                    {
+                                     foreach ($events as $event) : ?>
+                                        <tr>
+                                            <td class="<?= $event['Nom'] ?  : '' ?>"><?= $event['Nom'] ?></td>
+                                            <td class="<?= $event['date_event'] ?  : '' ?>"><?= $event['date_event'] ?></td>
+                                            <td class="<?= $event['Duree'] ?  : '' ?>"><?= $event['Duree'] ?></td>
+                                            <td>
+                        
+                                                <!-- lien vers la page edit_todo.php -->
+                                                <a href="etudiant_edit.php?id=<?= $event['id'] ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                                                <!-- lien vers la page delete_todo.php -->
+                                                <a href="etudiant_delete.php?id=<?= $event['id'] ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                                                
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                    <?php
+                                    } else
+                                    {
+                                        $filtervalues = $_GET['search'];
+                                        $query = "SELECT * FROM  `events` WHERE CONCAT(`Nom`) LIKE  '%$filtervalues%' ";
+                                        $query_run = mysqli_query($con, $query);
+                                        $query2 = "SELECT * FROM  `events` ORDER BY date_event";
+                                        $query_run2 = mysqli_query($con, $query2);
+
+                                        if(mysqli_num_rows($query_run) >0)
+                                        {
+
+                                            
+                                            foreach($query_run as $items)
+                                            {
+                                                ?>
+                                               <tr>
+                                                <td class="<?= $items['Nom'] ?  : '' ?>"><?= $items['Nom'] ?></td>
+                                                <td class="<?= $items['date_event'] ?  : '' ?>"><?= $items['date_event'] ?></td>
+                                                <td class="<?= $items['Duree'] ?  : '' ?>"><?= $items['Duree'] ?></td>
+                                                <td>
+
+                                                    <!-- lien vers la page edit_todo.php -->
+                                                    <a href="etudiant_edit.php?id=<?= $items['id'] ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                                                    <!-- lien vers la page delete_todo.php -->
+                                                    <a href="etudiant_delete.php?id=<?= $items['id'] ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                                                    
+                                                </td>
+                                                 </tr>
+                                                <?php
+                                            }
+                                        }
+                                        else
+                                        { 
+                                            ?>
+                                            <tr>
+                                                <td colspan="4">No show Found</td>
+                                            </tr>
+                                        <?php
+                                        }
+                                    }
+                                ?>
+                            </tbody>
+                       
+    </table>
+    </div>
+    </section>
+
+  
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="zoom-in">
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets2/img/testimonials/2.png" class="testimonial-img" alt="">
+              <h3>ala sahbeni</h3>   
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets2/img/testimonials/5.png" class="testimonial-img" alt="">
+              <h3>zeineb rouihi</h3>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets2/img/testimonials/4.png" class="testimonial-img" alt="">
+              <h3>ala ben khlifa</h3>
+           
+              
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets2/img/testimonials/6.png" class="testimonial-img" alt="">
+              <h3>said mhamdi</h3>
+              
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets2/img/testimonials/1.png" class="testimonial-img" alt="">
+              <h3>mohamed aziz mabrouki</h3>
+            </div>
+          </div><!-- End testimonial item -->
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+
+  
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-info">
+            <h3>Gp<span>.</span></h3>
+            <p>
+              A108 Adam Street <br>
+              NY 535022, USA<br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets2/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets2/vendor/aos/aos.js"></script>
+<script src="assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets2/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets2/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets2/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets2/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main1.js"></script>
+<script src="assets/js/script1.js"></script>

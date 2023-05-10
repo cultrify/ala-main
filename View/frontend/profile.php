@@ -3,7 +3,7 @@
   include_once dirname(__FILE__). '/../../Controller/ClientC.php';
 
   function renderHeader($pageTitle) {
-   // $loggedin = $_COOKIE['loggedin'];
+    $loggedin = $_COOKIE['loggedin'];
    $loggedin = isset($_COOKIE['loggedin']) ? $_COOKIE['loggedin'] : null;
 
     $fullname = $_COOKIE['firstname'].' '.$_COOKIE['lastname'];
@@ -16,7 +16,12 @@
 
     include './partials/header.php';
   }
+  $loggedin = $_COOKIE['loggedin'];
+  $loggedin = isset($_COOKIE['loggedin']) ? $_COOKIE['loggedin'] : null;
 
+   $fullname = $_COOKIE['firstname'].' '.$_COOKIE['lastname'];
+
+  
   renderHeader('Cultrify - '.$fullname.' - Profile');
 
   $clientC = new ClientC();
@@ -71,7 +76,9 @@
           || ($clientExists && $clientExists['idClient'] == $_COOKIE['idClient'])
         ) {
           print_r($_POST);
-
+       
+          $_COOKIE['firstname'] =  $_POST['firstName'] ;
+          $_COOKIE['lastname'] =  $_POST['lastName'] ;
           $client = new Client(
             null,
             $_POST['firstName'],
@@ -99,6 +106,7 @@
       header("Location: ".$_SERVER['PHP_SELF']);
     }
   }
+  $currentClient = $clientC->showClient($_COOKIE['idClient']);
 ?>
   <div class="container rounded mt-5 mb-5" style="background-color: #faf7fe;">
     <div class="row">
@@ -112,7 +120,7 @@
         </div>
       </div>
       <div class="col-md-5 border-right">
-        <form action="/zeineb-main/View/frontend/profile.php" method="post">
+        <form action="/ala-main-main/View/frontend/profile.php" method="post">
           <div class="p-3 py-5">
             <div class="d-flex justify-content-between align-items-center mb-3">
               <h4 class="text-right">Profile Settings</h4>
@@ -147,7 +155,7 @@
               Update Profile</button></div>
           </div>
         </form>
-        <form action="/zeineb-main/View/frontend/delete.php" method="delete">
+        <form action="/ala-main-main/View/frontend/delete.php" method="delete">
           <div class="mt-5 text-center">
             <button type="submit" class="btn btn-danger profile-button" type="button">Delete Account</button>
           </div>

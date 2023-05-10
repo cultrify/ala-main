@@ -68,9 +68,9 @@
         $special_ok = true;
       }
 
-      if (!$length_ok || !$uppercase_ok || !$lowercase_ok || !$digit_ok || !$special_ok) {
+      /*if (!$length_ok || !$uppercase_ok || !$lowercase_ok || !$digit_ok || !$special_ok) {
         $passwordErr = 'Password is weak!';
-      }
+      }*/
     }
 
     if (empty($_POST['email'])) {
@@ -128,7 +128,8 @@
           $mail->isHTML(true); 
           $email_template = 'email-confirmation.html';
           $message = file_get_contents($email_template);
-          $link = str_replace('signup.php', 'confirm-account.php?confirmationCode='.$randomStr, $_SERVER['REQUEST_URI']);
+        //  $link = str_replace('signup.php', 'login.php'.$randomStr, $_SERVER['REQUEST_URI']);
+          $link = str_replace('signup.php', 'login.php', $_SERVER['REQUEST_URI']);
           $link = 'http://localhost'.$link;
           $message = str_replace(
             '%confirmationLink%', 
@@ -175,7 +176,7 @@
         echo '<div class="success-msg">'.$sucessMsg.'</div>' ;
       }
     ?>
-    <form action="/zeineb-main/View/frontend/auth/signup.php" method="post">
+    <form action="" method="post">
       <section>
         <div class="inner">
           <a href="#" class="avartar">

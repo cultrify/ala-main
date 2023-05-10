@@ -57,21 +57,20 @@ if (isset($_COOKIE['lastname'])) {
             </div>
           </div>
         </div>
+       
         <div class="col-lg-6 mt-lg-0 mt-5 contact-right">
-          <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+          <form id="AddForm" method="post">
             <div class="input-grids">
               <div class="form-group">
-                <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*" class="contact-input" />
+                <input type="text"type="text" name="client" placeholder="client" class="contact-input" />
               </div>
+              
               <div class="form-group">
-                <input type="email" name="w3lSender" id="w3lSender" placeholder="Your Email*" class="contact-input" required="" />
-              </div>
-              <div class="form-group">
-                <input type="text" name="w3lSubect" id="w3lSubect" placeholder="Subject*" class="contact-input" />
+                <input type="text" type="text" name="subject" placeholder="subject" class="contact-input" />
               </div>
             </div>
             <div class="form-group">
-              <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here*" required=""></textarea>
+              <textarea name="content" placeholder="content"  required=""></textarea>
             </div>
             <div class="text-right">
               <button class="btn btn-style btn-primary">Send Message</button>
@@ -119,7 +118,7 @@ if (isset($_COOKIE['lastname'])) {
   <!--//MENU-JS-->
 
   <script src="assets/js/bootstrap.min.js"></script>
-
+  <script src="./reclamation.js"> </script>
 </body>
 
 </html>

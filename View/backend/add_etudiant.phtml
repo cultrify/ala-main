@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="./css2/styleadd.css">
+<link rel="stylesheet" href="./css2/style.css">
+<style>
+   .error {
+      color: red;
+    }
+</style>
+<section class="h-100 bg-dark">
+    <div id="ok" class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="./img2/pablo-heimplatz-ZODcBkEohk8-unsplash.jpg"
+                  alt="Sample photo" class="img-fluid" id="img"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; " />
+              </div>
+              <div class="col-xl-6">
+
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return validateForm()">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">ajouter un evenenment </h3>
+  
+                  <div class="row">
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="nom">Nom</label>
+                    <input type="text"  id="Nom" name="Nom" class="form-control form-control-lg" />
+                    <span class="error" id="nameError"></span>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="nom">Description</label>
+                    <input type="text" id="desc" name="desc" class="form-control form-control-lg" />
+                    <span class="error" id="DescError"></span>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="Duree">Duree</label>
+                    <input type="number"  class="form-control form-control-lg" id="Duree" name="Duree"/>
+                    <span class="error" id="DureeError"></span>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="email">date_event</label>
+                    <input type="date" id="date_event" name="date_event" class="form-control form-control-lg" />
+                    <span class="error" id="date_eventError"></span>
+                  </div>
+  
+                  
+
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="reset" class="btn btn-light btn-lg">Reset all</button>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+ function validateForm() {
+  let name = document.getElementById("Nom").value.trim();
+  let desc = document.getElementById("desc").value.trim();
+  let Duree = document.getElementById("Duree").value.trim();
+  let date_event = document.getElementById("date_event").value.trim();
+
+  let nameError = document.getElementById("nameError");
+  let DescError = document.getElementById("DescError");
+  let DureeError = document.getElementById("DureeError");
+  let date_eventError = document.getElementById("date_eventError");
+
+  // Reset error messages
+  nameError.innerHTML = "";
+  DescError.innerHTML = "";
+  DureeError.innerHTML = "";
+  date_eventError.innerHTML = "";
+
+  let isValid = true;
+
+  // Validate name
+  if (name == "") {
+    nameError.innerHTML = "Name is required";
+    isValid = false;
+  }
+
+  // Validate description
+  if (desc == "") {
+    DescError.innerHTML = "Description is required";
+    isValid = false;
+  } 
+  // Validate date_event
+  if (date_event == "") {
+    date_eventError.innerHTML = "date_event is required";
+    isValid = false;
+  } 
+
+  // Validate duration
+  if (Duree == "") {
+    DureeError.innerHTML = "Duration is required";
+    isValid = false;
+  } else if (Duree < 1) {
+    DureeError.innerHTML = "Duration must be at least 1 hour";
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+  </script>

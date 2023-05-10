@@ -2,6 +2,7 @@
 <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-secondary navbar-dark">
         <a href="index.html" class="navbar-brand mx-4 mb-3">
+        
             <h3 class="text-primary">Cultrify</h3>
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
@@ -15,11 +16,15 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="./index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="./admins.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Admins</a>
-            <a href="./coupon.php" class="nav-item nav-link"><i class="fa fa-dollar"></i>  Coupons</a>
-            <a href="./qrcode.php" class="nav-item nav-link"><i class="fa fa-qrcode"></i>  QRCode Scanner </a>
-
+                <a href="./index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="./admins.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Admins</a>
+                <a href="./coupon.php" class="nav-item nav-link"><i class="fa fa-dollar"></i>  Coupons</a>
+                <a href="./qrcode.php" class="nav-item nav-link"><i class="fa fa-qrcode"></i>  QRCode Scanner </a>
+                <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                        <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                        <a href="table.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>reclamation</a>
+                        <a href="table1.php" class="nav-item nav-link "><i class="fa fa-table me-2"></i>event</a>
+                        <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
         </div>
     </nav>
 </div>

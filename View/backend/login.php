@@ -7,7 +7,7 @@
    
   if(isset($_COOKIE['adminLoggedin'])) {
     if($_COOKIE['adminLoggedin']){
-    header('Location: /zeineb-main/View/backend');
+    header('Location: /ala-main-main/View/backend');
     exit();
     }
   }
@@ -111,7 +111,7 @@
               </a>
               <h3>Login</h3>
             </div>
-            <form action="/zeineb-main/View/backend/login.php" method="post">
+            <form action="/ala-main-main/View/backend/login.php" method="post">
               <div class="form-floating mb-3">
                 <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>

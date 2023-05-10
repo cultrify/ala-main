@@ -88,7 +88,7 @@
         echo '<div class="err-msg">'.$errMsg.'</div>' ;
       }
     ?>
-    <form action="/zeineb-main/View/frontend/auth/login.php" method="post">
+    <form action="/ala-main-main/View/frontend/auth/login.php" method="post">
       <section>
         <div class="inner">
           <a href="#" class="avartar">
